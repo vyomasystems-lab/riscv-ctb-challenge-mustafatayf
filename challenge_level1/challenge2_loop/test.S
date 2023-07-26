@@ -12,8 +12,11 @@ RVTEST_CODE_BEGIN
 
   la t0, test_cases
   li t5, 3
+  li t6, 1
 
 loop:
+  beqz t5, test_end
+  sub t5, t5, t6
 	lw t1, (t0)
   lw t2, 4(t0)
   lw t3, 8(t0)
